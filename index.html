@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTM Reseller Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin:0;
+            padding:0;
+            background:#f5f5f5;
+        }
+        header {
+            background:#ff6600;
+            color:white;
+            text-align:center;
+            padding:20px 0;
+        }
+        nav {
+            text-align:center;
+            margin:20px 0;
+        }
+        nav a {
+            margin:0 15px;
+            text-decoration:none;
+            color:#333;
+            font-weight:bold;
+        }
+        .products {
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+            gap:20px;
+            padding:20px;
+        }
+        .product {
+            background:white;
+            padding:15px;
+            border-radius:10px;
+            box-shadow:0 2px 6px rgba(0,0,0,0.1);
+            text-align:center;
+        }
+        .product img {
+            max-width:100%;
+            border-radius:10px;
+        }
+        .product h3 {
+            margin:10px 0;
+        }
+        .product p {
+            color:#666;
+        }
+        .product button, .product a {
+            background-color:#ff6600;
+            color:white;
+            border:none;
+            padding:10px 15px;
+            border-radius:5px;
+            cursor:pointer;
+            text-decoration:none;
+            font-weight:bold;
+            margin:5px 0;
+            display:inline-block;
+        }
+        footer {
+            text-align:center;
+            padding:20px;
+            background:#333;
+            color:white;
+            margin-top:20px;
+        }
+        .contact-form {
+            max-width:500px;
+            margin:30px auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 2px 6px rgba(0,0,0,0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+            border-radius:5px;
+            border:1px solid #ccc;
+        }
+        .contact-form button {
+            background-color:#ff6600;
+            color:white;
+            padding:10px 20px;
+            border:none;
+            cursor:pointer;
+            font-weight:bold;
+            border-radius:5px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>KTM Reseller Store</h1>
+    <p>Buy popular products in Kathmandu easily!</p>
+</header>
+
+<nav>
+    <a href="#products">Products</a>
+    <a href="#contact">Order Now</a>
+</nav>
+
+<section class="products" id="products">
+    <!-- Example products -->
+    <div class="product">
+        <img src="https://via.placeholder.com/250?text=Phone+Charger" alt="Phone Charger">
+        <h3>Phone Charger</h3>
+        <p>High-quality charger for fast charging.</p>
+        <button onclick="orderProduct('Phone Charger')">Order Now</button>
+        <a href="https://esewa.com.np/" target="_blank">Pay via eSewa</a>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/250?text=Earphones" alt="Earphones">
+        <h3>Earphones</h3>
+        <p>Noise-cancelling earphones, durable and stylish.</p>
+        <button onclick="orderProduct('Earphones')">Order Now</button>
+        <a href="https://esewa.com.np/" target="_blank">Pay via eSewa</a>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/250?text=T-Shirt" alt="T-Shirt">
+        <h3>Trendy T-Shirt</h3>
+        <p>Comfortable cotton t-shirt for everyday wear.</p>
+        <button onclick="orderProduct('Trendy T-Shirt')">Order Now</button>
+        <a href="https://esewa.com.np/" target="_blank">Pay via eSewa</a>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/250?text=Wallet" alt="Wallet">
+        <h3>Wallet</h3>
+        <p>Leather wallet with multiple compartments.</p>
+        <button onclick="orderProduct('Wallet')">Order Now</button>
+        <a href="https://esewa.com.np/" target="_blank">Pay via eSewa</a>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/250?text=Sunglasses" alt="Sunglasses">
+        <h3>Sunglasses</h3>
+        <p>UV-protected, stylish sunglasses for daily use.</p>
+        <button onclick="orderProduct('Sunglasses')">Order Now</button>
+        <a href="https://esewa.com.np/" target="_blank">Pay via eSewa</a>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/250?text=Face+Mask" alt="Face Mask">
+        <h3>Face Mask</h3>
+        <p>Reusable, comfortable face mask for health safety.</p>
+        <button onclick="orderProduct('Face Mask')">Order Now</button>
+        <a href="https://esewa.com.np/" target="_blank">Pay via eSewa</a>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/250?text=Notebook" alt="Notebook">
+        <h3>Notebook</h3>
+        <p>College & school notebooks, high-quality paper.</p>
+        <button onclick="orderProduct('Notebook')">Order Now</button>
+        <a href="https://esewa.com.np/" target="_blank">Pay via eSewa</a>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/250?text=Pen" alt="Pen">
+        <h3>Pen</h3>
+        <p>Gel pen, smooth writing, long-lasting ink.</p>
+        <button onclick="orderProduct('Pen')">Order Now</button>
+        <a href="https://esewa.com.np/" target="_blank">Pay via eSewa</a>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/250?text=Power+Bank" alt="Power Bank">
+        <h3>Power Bank</h3>
+        <p>Compact power bank for fast charging on-the-go.</p>
+        <button onclick="orderProduct('Power Bank')">Order Now</button>
+        <a href="https://esewa.com.np/" target="_blank">Pay via eSewa</a>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/250?text=Snack+Pack" alt="Snack Pack">
+        <h3>Snack Pack</h3>
+        <p>Delicious snacks delivered right to your door.</p>
+        <button onclick="orderProduct('Snack Pack')">Order Now</button>
+        <a href="https://esewa.com.np/" target="_blank">Pay via eSewa</a>
+    </div>
+</section>
+
+<section class="contact-form" id="contact">
+    <h2>Place Your Order</h2>
+    <form id="orderForm" action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST" target="_blank">
+        <input type="text" name="entry.1234567890" placeholder="Your Name" required>
+        <input type="text" name="entry.0987654321" placeholder="Phone Number" required>
+        <input type="text" name="entry.1122334455" id="productInput" placeholder="Product Name" required>
+        <textarea name="entry.6677889900" placeholder="Delivery Address" required></textarea>
+        <button type="submit">Submit Order</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 KTM Reseller Store. All rights reserved.</p>
+</footer>
+
+<script>
+    function orderProduct(productName) {
+        document.getElementById('productInput').value = productName;
+        window.location.href = "#contact";
+    }
+</script>
